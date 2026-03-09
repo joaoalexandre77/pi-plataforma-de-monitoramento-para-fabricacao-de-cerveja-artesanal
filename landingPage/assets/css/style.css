@@ -1,0 +1,196 @@
+@import url('https://googleapis.com');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    padding-top: 60px;
+    background-color: #0F172A;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+
+/* Header */
+.header-bar {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    padding: 0px 30px 0px 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 23%;
+}
+
+.item-nav-bar {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: opacity 0.2s, transform 0.2s, background-size 0.3s;
+    background-image: linear-gradient(#0F172A, #0F172A);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+}
+
+.item-nav-bar:hover {
+    transform: translateY(-3px);
+    animation-fill-mode: forwards;
+    background-size: 100% 1px;
+}
+
+.item-nav-bar:active {
+    opacity: 0.5;
+}
+
+.logo-hearder {
+    width: 130px;
+}
+
+/* Hero */
+.hero {
+    background-color: #0F172A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 850px;
+    z-index: 0;
+}
+
+.logo-hero {
+    margin-left: 80px;
+    width: 600px;
+}
+
+.button-hero {
+    width: 150px;
+    height: 50px;
+    margin: 30px 0px 0px 80px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    transition:  opacity 0.2s,  transform 0.2s;
+}
+
+.button-hero:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+.button-hero:active {
+    transform: scale(1);
+}
+
+/* Sobre */
+.sobre-conloq {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px 0px 30px;
+    height: 800px;
+    z-index: 0;
+}
+
+.h1-sobre-conloq {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.articles-sobre-conloq {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.article-texto-sobre-conloq {
+    flex: 1;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.p-article-texto-sobre-conloq {
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+
+
+.article-blocks-sobre-conloq{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.h1-propositos-article-blocks-sobre-conloq {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.tr-block-sobre-conloq {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 35px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    perspective: 1000px;
+    
+}
+
+.td-block-sobre-conloq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 260px;
+    height: 260px;
+    background-color: #0F172A;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease-out;
+}
+
+.h1-td-block-sobre-conloq {
+    margin: 5px;
+}
+
+.p-td-block-sobre-conloq {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
