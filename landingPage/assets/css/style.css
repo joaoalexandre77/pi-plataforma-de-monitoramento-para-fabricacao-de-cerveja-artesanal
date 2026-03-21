@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .header-bar {
-    z-index: 1;
+    z-index: 3;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -29,8 +29,8 @@ body {
     left: 0px;
     right: 0px;
     height: 60px;
-    padding: 0px 30px 0px 30px;
-    background-color: #ffffff;
+    padding: 0px 60px 0px 60px;
+    background-color: #0C3A47;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,12 +42,12 @@ body {
 
 .item-nav-bar {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     transition: opacity 0.2s, transform 0.2s, background-size 0.3s;
-    background-image: linear-gradient(#0F172A, #0F172A);
+    background-image: linear-gradient(#ffffff, #ffffff);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 0% 1px;
@@ -55,7 +55,6 @@ body {
 
 .item-nav-bar:hover {
     transform: translateY(-3px);
-    animation-fill-mode: forwards;
     background-size: 100% 1px;
 }
 
@@ -68,6 +67,14 @@ body {
 }
 
 /* Hero */
+    .hero-content {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 80px;
+    }
+
 .hero {
     background-color: #0F172A;
     display: flex;
@@ -78,20 +85,32 @@ body {
 }
 
 .logo-hero {
-    margin-left: 80px;
     width: 600px;
 }
 
 .button-hero {
+    background-color: #0C3A47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
     width: 150px;
     height: 50px;
-    margin: 30px 0px 0px 80px;
+    margin: 60px 0px 0px 80px;
     border-radius: 5px;
     border: none;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
-    transition:  opacity 0.2s,  transform 0.2s;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.button-hero,
+.button-hero:visited {
+    color: #ffffff !important;
+    background-color: #0C3A47 !important;
+    text-decoration: none;
 }
 
 .button-hero:hover {
@@ -109,9 +128,10 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 60px 0px 60px;
     height: 800px;
     z-index: 0;
+    scroll-margin-top: 60px;
 }
 
 .h1-sobre-conloq {
@@ -139,9 +159,7 @@ body {
     font-weight: 500;
 }
 
-
-
-.article-blocks-sobre-conloq{
+.article-blocks-sobre-conloq {
     flex: 1.5;
     display: flex;
     flex-direction: column;
@@ -165,7 +183,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     perspective: 1000px;
-    
+
 }
 
 .td-block-sobre-conloq {
@@ -180,7 +198,7 @@ body {
     background-color: #0F172A;
     color: #ffffff;
     position: relative;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-out;
 }
 
@@ -193,4 +211,2147 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Equipe */
+.equipe {
+    background-color: #0F172A;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px 0px 60px;
+    height: 600px;
+    z-index: 0;
+    scroll-margin-top: 60px;
+}
+
+.h1-equipe {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.Div-Cards-Equipe {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Card-Equipes {
+    width: 280px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.Card-Equipes:hover {
+    transform: scale(1.06);
+}
+
+.Image-Card-Equipe {
+    width: 280px;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: border-radius 0.3s, height 0.2s;
+}
+
+.Card-Equipes:hover .Image-Card-Equipe {
+    height: 240px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.Info-Cards-Equipe {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.Text-Info-Cards-Equipe {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.Card-Equipes:hover .Info-Cards-Equipe {
+    opacity: 1;
+}
+
+.Link-Text-Info-Cards-Equipe {
+    background-image: linear-gradient(#0F172A, #0F172A);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: transform 0.3s, background-size 0.3s, opacity 0.2s;
+    background-size: 0% 1px;
+}
+
+.Link-Text-Info-Cards-Equipe:hover {
+    transform: translateY(-3px);
+    background-size: 100% 1px;
+}
+
+.Link-Text-Info-Cards-Equipe:active {
+    opacity: 0.5;
+}
+
+
+/* Cerveja */
+.cerveja-artesanal {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px 0px 60px;
+    height: 800px;
+    z-index: 0;
+    scroll-margin-top: 60px;
+}
+
+.h1-sobre-cerveja {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.articles-sobre-cerveja {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.text-article-cerveja {
+    flex: 1;
+    border-right: 1px solid black;
+    padding-right: 25px;
+}
+
+.h2-sobre-cerveja {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.text-sobre-cerveja {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.carrousel-article-cerveja {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+    margin-left: 25px;
+    padding-left: 25px;
+}
+
+.carrousel-article-cerveja::-webkit-scrollbar {
+    display: none;
+}
+
+.Div-Carrousel-Img-Sobre-cerveja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 25px;
+    animation: carrousel 16s infinite linear;
+    will-change: transform;
+}
+
+.Img-Div-Sobre-cerveja {
+    -webkit-box-shadow: 1px 1px 22px -9px #000000;
+    box-shadow: 1px 1px 22px -9px #000000;
+    border-radius: 10px;
+    height: 450px;
+}
+
+@keyframes carrousel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 12.5px));
+    }
+}
+
+
+/* Mash */
+.sobre-sistema {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px 0px 60px;
+    height: 800px;
+    z-index: 0;
+    scroll-margin-top: 60px;
+}
+
+.mash {
+    display: flex;
+    flex: 0.9;
+    flex-direction: row;
+}
+
+.h1-sobre-mash {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.bolinhas-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.bolinhas-container button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    transition: 200ms, transform 200ms;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.bolinhas-container .bolinha-ativa {
+    background: #0F172A;
+    transform: scale(1.15);
+}
+
+.text-Sobre-mash {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Div-Img-Sobre-mash {
+    position: relative;
+    flex: 0 0 60%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 520px;
+    display: block;
+    overflow: visible;
+}
+
+.card-img {
+    position: absolute;
+    width: 60%;
+    max-width: 520px;
+    height: auto;
+    max-height: 720px;
+    object-fit: contain;
+    display: block;
+    transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+    will-change: left, top, transform, opacity;
+    pointer-events: none;
+    border: none;
+    transform-origin: center center;
+}
+
+/* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+#img1 {
+    left: 40%;
+    top: 58%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+#img2 {
+    left: 72%;
+    top: 30%;
+    transform: translate(-50%, -50%) scale(0.98);
+    z-index: 1;
+    opacity: 0.98;
+}
+
+/* swap: inverte posições sem extrapolar */
+.Div-Img-Sobre-mash.swap #img1 {
+    left: 72%;
+    top: 30%;
+    transform: translate(-50%, -50%) scale(0.98);
+    z-index: 1;
+    opacity: 0.98;
+}
+
+.Div-Img-Sobre-mash.swap #img2 {
+    left: 40%;
+    top: 58%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #0F172A;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px 0px 60px;
+    height: 300px;
+    z-index: 0;
+    scroll-margin-top: 60px;
+}
+
+.group-sections-footer {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.h1-footer {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.section-contato-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-contato-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.a-link-footer {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: transform 0.3s, background-size 0.3s, opacity 0.2s;
+    background-size: 0% 1px;
+    margin-bottom: 20px;
+}
+
+.a-link-footer:hover {
+    transform: translateY(-3px);
+    background-size: 100% 2px;
+}
+
+.section-redes-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-redes-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-footer {
+    color: #ffffff;
+    width: 40px;
+    margin-right: 5px;
+}
+
+
+
+/* Celular Extra pequeno*/
+@media (max-width: 480px) {
+
+    /* Header */
+
+    .header-bar {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .nav-bar {
+        width: 70%;
+    }
+
+    .item-nav-bar {
+        font-size: 14px;
+    }
+
+    .logo-hearder {
+        width: 70px;
+    }
+
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    .button-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 10px 0px 10px;
+        height: 1500px;
+    }
+
+    .h1-sobre-conloq {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .articles-sobre-conloq {
+        flex-direction: column;
+    }
+
+    .article-texto-sobre-conloq {
+        flex: 0;
+        font-size: 15px;
+    }
+
+    .p-article-texto-sobre-conloq {
+        text-align: center;
+    }
+
+    .h1-propositos-article-blocks-sobre-conloq {
+        font-size: 23px;
+    }
+
+    .article-blocks-sobre-conloq {
+        flex: 1;
+    }
+
+    .tr-block-sobre-conloq {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .td-block-sobre-conloq {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    /* Equipe */
+
+    .equipe {
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+        height: 1600px;
+    }
+
+    .h1-equipe {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Div-Cards-Equipe {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Card-Equipes {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover {
+        transform: scale(1.06);
+    }
+
+    .Image-Card-Equipe {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover .Image-Card-Equipe {
+        height: 220px;
+    }
+
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 10px 0px 10px;
+        height: 1000px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .articles-sobre-cerveja {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 1;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 230px;
+    }
+
+    /* Mash */
+
+    .sobre-sistema {
+        padding: 0px 10px 0px 10px;
+        height: 800px;
+    }
+
+    .mash {
+        height: 600px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .h1-sobre-mash {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bolinhas-container {
+        justify-content: center;
+    }
+
+    .text-Sobre-mash {
+        font-size: 15px;
+    }
+
+    .Div-Img-Sobre-mash {
+        position: relative;
+        flex: 0 0 60%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        display: block;
+        overflow: visible;
+    }
+
+    .card-img {
+        position: absolute;
+        width: 70%;
+        max-width: 520px;
+        height: auto;
+        max-height: 720px;
+        object-fit: contain;
+        display: block;
+        transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+        will-change: left, top, transform, opacity;
+        pointer-events: none;
+        border: none;
+        transform-origin: center center;
+    }
+
+    /* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+    #img1 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    #img2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    /* swap: inverte posições sem extrapolar */
+    .Div-Img-Sobre-mash.swap #img1 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    .Div-Img-Sobre-mash.swap #img2 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0px 10px 0px 10px;
+        height: 300px;
+
+    }
+
+    .group-sections-footer {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .h1-footer {
+        font-size: 20px;
+    }
+
+    .a-link-footer {
+        font-size: 15px;
+    }
+
+    .img-footer {
+        color: #ffffff;
+        width: 30px;
+        margin-right: 5px;
+    }
+}
+
+/* CelularPequeno*/
+@media (min-width: 481px) and (max-width: 549px) {
+    /* Header */
+
+    .header-bar {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .nav-bar {
+        width: 60%;
+    }
+
+    .item-nav-bar {
+        font-size: 15px;
+    }
+
+    .logo-hearder {
+        width: 100px;
+    }
+
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 400px;
+    }
+
+    .button-hero {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 20px 0px 20px;
+        height: 1400px;
+    }
+
+    .h1-sobre-conloq {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .articles-sobre-conloq {
+        flex-direction: column;
+    }
+
+    .article-texto-sobre-conloq {
+        flex: 0.5;
+        font-size: 15px;
+    }
+
+    .p-article-texto-sobre-conloq {
+        text-align: center;
+    }
+
+    .h1-propositos-article-blocks-sobre-conloq {
+        font-size: 23px;
+    }
+
+    .article-blocks-sobre-conloq {
+        flex: 1.5;
+    }
+
+    .tr-block-sobre-conloq {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .td-block-sobre-conloq {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    /* Equipe */
+
+    .equipe {
+        flex-direction: column;
+        padding: 0px 20px 0px 20px;
+        height: 1600px;
+    }
+
+    .h1-equipe {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Div-Cards-Equipe {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Card-Equipes {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover {
+        transform: scale(1.06);
+    }
+
+    .Image-Card-Equipe {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover .Image-Card-Equipe {
+        height: 220px;
+    }
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 20px 0px 20px;
+        height: 1000px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .articles-sobre-cerveja {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 1;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 230px;
+    }
+
+    /* Mash */
+
+    .sobre-sistema {
+        padding: 0px 20px 0px 20px;
+        height: 800px;
+    }
+
+    .mash {
+        height: 600px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .h1-sobre-mash {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bolinhas-container {
+        justify-content: center;
+    }
+
+    .text-Sobre-mash {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .Div-Img-Sobre-mash {
+        position: relative;
+        flex: 0 0 60%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        display: block;
+        overflow: visible;
+    }
+
+    .card-img {
+        position: absolute;
+        width: 70%;
+        max-width: 520px;
+        height: auto;
+        max-height: 720px;
+        object-fit: contain;
+        display: block;
+        transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+        will-change: left, top, transform, opacity;
+        pointer-events: none;
+        border: none;
+        transform-origin: center center;
+    }
+
+    /* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+    #img1 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    #img2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    /* swap: inverte posições sem extrapolar */
+    .Div-Img-Sobre-mash.swap #img1 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    .Div-Img-Sobre-mash.swap #img2 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0px 20px 0px 20px;
+        height: 300px;
+
+    }
+
+    .group-sections-footer {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .h1-footer {
+        font-size: 22px;
+    }
+
+    .a-link-footer {
+        font-size: 17px;
+    }
+
+    .img-footer {
+        color: #ffffff;
+        width: 30px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 769px) {
+    /* Header */
+
+    .header-bar {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .nav-bar {
+        width: 60%;
+    }
+
+    .item-nav-bar {
+        font-size: 15px;
+    }
+
+    .logo-hearder {
+        width: 100px;
+    }
+
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 400px;
+    }
+
+    .button-hero {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 30px 0px 30px;
+        height: 1400px;
+    }
+
+    .h1-sobre-conloq {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .articles-sobre-conloq {
+        flex-direction: column;
+    }
+
+    .article-texto-sobre-conloq {
+        flex: 0.5;
+        font-size: 15px;
+    }
+
+    .p-article-texto-sobre-conloq {
+        text-align: center;
+    }
+
+    .h1-propositos-article-blocks-sobre-conloq {
+        font-size: 23px;
+    }
+
+    .article-blocks-sobre-conloq {
+        flex: 1.5;
+    }
+
+    .tr-block-sobre-conloq {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .td-block-sobre-conloq {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    /* Equipe */
+
+    .equipe {
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+        height: 1000px;
+    }
+
+    .h1-equipe {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Div-Cards-Equipe {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Card-Equipes {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover {
+        transform: scale(1.06);
+    }
+
+    .Image-Card-Equipe {
+        width: 250px;
+        height: 320px;
+    }
+
+    .Card-Equipes:hover .Image-Card-Equipe {
+        height: 220px;
+    }
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 30px 0px 30px;
+        height: 1000px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .articles-sobre-cerveja {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 1;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 280px;
+    }
+
+    /* Mash */
+
+    .sobre-sistema {
+        padding: 0px 30px 0px 30px;
+        height: 800px;
+    }
+
+    .mash {
+        height: 600px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .h1-sobre-mash {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bolinhas-container {
+        justify-content: center;
+    }
+
+    .text-Sobre-mash {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .Div-Img-Sobre-mash {
+        position: relative;
+        flex: 0 0 60%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        display: block;
+        overflow: visible;
+    }
+
+    .card-img {
+        position: absolute;
+        width: 70%;
+        max-width: 520px;
+        height: auto;
+        max-height: 720px;
+        object-fit: contain;
+        display: block;
+        transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+        will-change: left, top, transform, opacity;
+        pointer-events: none;
+        border: none;
+        transform-origin: center center;
+    }
+
+    /* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+    #img1 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    #img2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    /* swap: inverte posições sem extrapolar */
+    .Div-Img-Sobre-mash.swap #img1 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    .Div-Img-Sobre-mash.swap #img2 {
+        left: 40%;
+        top: 58%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0px 30px 0px 30px;
+        height: 300px;
+
+    }
+
+    .group-sections-footer {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .h1-footer {
+        font-size: 22px;
+    }
+
+    .a-link-footer {
+        font-size: 17px;
+    }
+
+    .img-footer {
+        color: #ffffff;
+        width: 30px;
+        margin-right: 5px;
+    }
+}
+
+
+/*Tablet*/
+@media (min-width: 770px) and (max-width: 1024px) {
+    /* Header */
+
+    .header-bar {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .nav-bar {
+        width: 50%;
+    }
+
+    .item-nav-bar {
+        font-size: 18px;
+    }
+
+    .logo-hearder {
+        width: 150px;
+    }
+
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 600px;
+    }
+
+    .button-hero {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 30px 0px 30px;
+        height: 1000px;
+    }
+
+    .h1-sobre-conloq {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .articles-sobre-conloq {
+        flex-direction: column;
+    }
+
+    .article-texto-sobre-conloq {
+        flex: 0.5;
+        font-size: 15px;
+    }
+
+    .p-article-texto-sobre-conloq {
+        text-align: center;
+    }
+
+    .h1-propositos-article-blocks-sobre-conloq {
+        font-size: 23px;
+    }
+
+    .article-blocks-sobre-conloq {
+        flex: 1.5;
+    }
+
+    .tr-block-sobre-conloq {
+        font-size: 15px;
+    }
+
+    .td-block-sobre-conloq {
+        width: 230px;
+        height: 230px;
+    }
+
+    /* Equipe */
+
+    .equipe {
+        flex-direction: column;
+        padding: 0px 30px 0px 30px;
+        height: 800px;
+    }
+
+    .h1-equipe {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Div-Cards-Equipe {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Card-Equipes {
+        width: 215px;
+        height: 315px;
+    }
+
+    .Card-Equipes:hover {
+        transform: scale(1.06);
+    }
+
+    .Image-Card-Equipe {
+        width: 215px;
+        height: 315px;
+    }
+
+    .Card-Equipes:hover .Image-Card-Equipe {
+        height: 200px;
+    }
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 30px 0px 30px;
+        height: 1000px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .articles-sobre-cerveja {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 1;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 320px;
+    }
+
+    /* Mash */
+
+    .sobre-sistema {
+        padding: 0px 30px 0px 30px;
+        height: 800px;
+    }
+
+    .mash {
+        height: 600px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .h1-sobre-mash {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bolinhas-container {
+        justify-content: center;
+    }
+
+    .text-Sobre-mash {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .Div-Img-Sobre-mash {
+        position: relative;
+        flex: 0 0 60%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        display: block;
+        overflow: visible;
+    }
+
+    .card-img {
+        position: absolute;
+        width: 70%;
+        max-width: 520px;
+        height: auto;
+        max-height: 720px;
+        object-fit: contain;
+        display: block;
+        transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+        will-change: left, top, transform, opacity;
+        pointer-events: none;
+        border: none;
+        transform-origin: center center;
+    }
+
+    /* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+    #img1 {
+        left: 40%;
+        top: 68%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    #img2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    /* swap: inverte posições sem extrapolar */
+    .Div-Img-Sobre-mash.swap #img1 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    .Div-Img-Sobre-mash.swap #img2 {
+        left: 40%;
+        top: 68%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0px 30px 0px 30px;
+        height: 300px;
+
+    }
+
+    .group-sections-footer {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .h1-footer {
+        font-size: 25px;
+    }
+
+    .a-link-footer {
+        font-size: 17px;
+    }
+
+    .img-footer {
+        color: #ffffff;
+        width: 30px;
+        margin-right: 5px;
+    }
+}
+
+/* Monitor pequeno */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* Header */
+
+    .header-bar {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .nav-bar {
+        width: 40%;
+    }
+
+    .item-nav-bar {
+        font-size: 16px;
+    }
+
+    .logo-hearder {
+        width: 130px;
+    }
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 800px;
+    }
+
+    .button-hero {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 30px 0px 30px;
+        height: 1000px;
+    }
+
+    .h1-sobre-conloq {
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+    .articles-sobre-conloq {
+        flex-direction: column;
+    }
+
+    .article-texto-sobre-conloq {
+        flex: 0.5;
+        font-size: 15px;
+    }
+
+    .p-article-texto-sobre-conloq {
+        text-align: center;
+    }
+
+    .h1-propositos-article-blocks-sobre-conloq {
+        font-size: 23px;
+    }
+
+    .article-blocks-sobre-conloq {
+        flex: 1.5;
+    }
+
+    .tr-block-sobre-conloq {
+        font-size: 15px;
+    }
+
+    .td-block-sobre-conloq {
+        font-size: 18px;
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Equipe */
+
+    .equipe {
+        flex-direction: column;
+        padding: 0px 30px 0px 30px;
+        height: 600px;
+    }
+
+    .h1-equipe {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Div-Cards-Equipe {
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .Card-Equipes {
+        width: 215px;
+        height: 315px;
+    }
+
+    .Card-Equipes:hover {
+        transform: scale(1.06);
+    }
+
+    .Image-Card-Equipe {
+        width: 215px;
+        height: 315px;
+    }
+
+    .Card-Equipes:hover .Image-Card-Equipe {
+        height: 200px;
+    }
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 30px 0px 30px;
+        height: 1000px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .articles-sobre-cerveja {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 1;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 400px;
+    }
+
+    /* Mash */
+
+    .sobre-sistema {
+        padding: 0px 30px 0px 30px;
+        height: 800px;
+    }
+
+    .mash {
+        height: 600px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .h1-sobre-mash {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bolinhas-container {
+        justify-content: center;
+    }
+
+    .text-Sobre-mash {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Div-Img-Sobre-mash {
+        position: relative;
+        flex: 0 0 60%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        display: block;
+        overflow: visible;
+    }
+
+    .card-img {
+        position: absolute;
+        width: 70%;
+        max-width: 520px;
+        height: auto;
+        max-height: 720px;
+        object-fit: contain;
+        display: block;
+        transition: left 420ms cubic-bezier(.22, .9, .36, 1), top 420ms cubic-bezier(.22, .9, .36, 1), transform 420ms cubic-bezier(.22, .9, .36, 1), opacity 300ms;
+        will-change: left, top, transform, opacity;
+        pointer-events: none;
+        border: none;
+        transform-origin: center center;
+    }
+
+    /* posições — valores calculados para não ultrapassar borda direita (centro da imagem dentro dos limites) */
+    #img1 {
+        left: 40%;
+        top: 68%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    #img2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    /* swap: inverte posições sem extrapolar */
+    .Div-Img-Sobre-mash.swap #img1 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.98);
+        z-index: 1;
+        opacity: 0.98;
+    }
+
+    .Div-Img-Sobre-mash.swap #img2 {
+        left: 40%;
+        top: 68%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0px 30px 0px 30px;
+        height: 300px;
+
+    }
+
+    .group-sections-footer {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .h1-footer {
+        font-size: 25px;
+    }
+
+    .a-link-footer {
+        font-size: 20px;
+    }
+
+    .img-footer {
+        color: #ffffff;
+        width: 30px;
+        margin-right: 5px;
+    }
+}
+
+/* Monitor médio */
+@media (min-width: 1281px) and (max-width: 1536px) {
+    /* Header */
+
+    .header-bar {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .nav-bar {
+        width: 30%;
+    }
+
+    .item-nav-bar {
+        font-size: 16px;
+    }
+
+    .logo-hearder {
+        width: 130px;
+    }
+
+    /* Hero */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 00px;
+    }
+
+
+    .hero {
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        z-index: 0;
+    }
+
+    .logo-hero {
+        margin-left: 0px;
+        width: 800px;
+    }
+
+    .button-hero {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        width: 150px;
+        height: 50px;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .button-hero:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    .button-hero:active {
+        transform: scale(1);
+    }
+
+    /* Sobre */
+    .sobre-conloq {
+        padding: 0px 30px 0px 30px;
+    }
+
+    /* Equipe */
+    .equipe {
+        padding: 0px 30px 0px 30px;
+    }
+
+    /* Cerveja */
+
+    .cerveja-artesanal {
+        padding: 0px 30px 0px 30px;
+        height: 800px;
+    }
+
+    .h1-sobre-cerveja {
+        font-size: 25px;
+    }
+
+    .articles-sobre-cerveja {
+        flex: 1;
+    }
+
+    .text-article-cerveja {
+        border-right: 0px solid black;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .h2-sobre-cerveja {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .text-sobre-cerveja {
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+
+    .carrousel-article-cerveja {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .carrousel-article-cerveja::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Div-Carrousel-Img-Sobre-cerveja {
+        flex: 0.5;
+        height: 100%;
+    }
+
+    .Img-Div-Sobre-cerveja {
+        height: 300px;
+    }
+
+    /* Mash */
+    .sobre-sistema {
+        padding: 0px 30px 0px 30px;
+    }
 }

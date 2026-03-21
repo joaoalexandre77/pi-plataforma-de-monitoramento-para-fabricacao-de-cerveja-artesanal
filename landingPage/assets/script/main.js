@@ -19,3 +19,20 @@ blocks.forEach(block => {
     });
 })
 
+const carrousel = document.querySelector('.Div-Carrousel-Img-Sobre-cerveja');
+carrousel.innerHTML += carrousel.innerHTML;
+
+const buttons = document.querySelectorAll('.bolinhas-container button');
+const imgContainer = document.querySelector('.Div-Img-Sobre-mash');
+
+function setActive(targetId) {
+    buttons.forEach(b => b.classList.toggle('bolinha-ativa', b.dataset.target === targetId));
+    // quando target é img2 aplicamos swap (inverte posições e camadas)
+    if (targetId === 'img2') {
+        imgContainer.classList.add('swap');
+    } else {
+        imgContainer.classList.remove('swap');
+    }
+}
+
+buttons.forEach(btn => btn.addEventListener('click', () => setActive(btn.dataset.target)));
